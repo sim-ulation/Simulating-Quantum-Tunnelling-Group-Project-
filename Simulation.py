@@ -89,9 +89,9 @@ fig, ax = plt.subplots(figsize=(10,6), dpi=100)
 
 
 #wave packet line
-line, = ax.plot([], [], 'b-', linewidth=1.5, label='|Ψ(x,t)|', color='magenta', zorder=1) #creates empty line object that updates each time. [] means start with no data
+line, = ax.plot([], [], 'b-', linewidth=1.5, label='|Ψ(x,t)|', color='c', zorder=1) #creates empty line object that updates each time. [] means start with no data
 # Potential line (thinner, on top)
-potential_line, = ax.plot(x, 0.003*V, 'b-', linewidth=1.5, label='V(x) \times 0.003', alpha=0.7, zorder=2) #plots potential barrier
+potential_line, = ax.plot(x, 0.003*V, 'b-',color='crimson', linewidth=1.5, label='V(x) \times 0.003', alpha=0.7, zorder=2) #plots potential barrier
 
 #setting plot boundaries
 ax.set_xlim(xmin, xmax) #-6.5 to 6.5 for x
@@ -134,4 +134,5 @@ anim = FuncAnimation(fig, animate, init_func=init, frames=frames + pause_frames,
 
 plt.tight_layout()
 plt.show()
+
 
